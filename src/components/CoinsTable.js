@@ -6,13 +6,13 @@ import {
   Container,
   TextField,
   TableContainer,
-   LinearProgress,
-   Table,
-   TableHead,
-   TableRow,
-   TableCell,
-   TableBody,
-   Paper } from "@material-ui/core";
+  LinearProgress,
+  Table,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableBody,
+} from "@material-ui/core";
 import { makeStyles } from '@mui/styles'
 import axios from "axios";
 import React, { useState, useEffect } from 'react'
@@ -21,7 +21,6 @@ import { CryptoState } from '../CryptoContext';
 import { useNavigate } from "react-router-dom";
 import { numberWithCommas } from "./Banner/Carousel";
 import { Pagination } from "@material-ui/lab";
-import { Scale } from "chart.js";
 
 const useStyles = makeStyles(()=>({
   row: {
