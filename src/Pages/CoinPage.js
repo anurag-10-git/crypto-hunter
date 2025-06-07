@@ -8,8 +8,6 @@ import CoinInfo from '../components/CoinInfo';
 import ReactHtmlParser from "react-html-parser";
 import { numberWithCommas } from '../components/Banner/Carousel';
 
-// import { numberWithCommas } from '../components/Banner/Carousel';
-// import ReactHtmlParser from "react-html-parser";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -81,6 +79,7 @@ console.log(coin);
 
 useEffect(() => {
   fetchCoin();
+// eslint-disable-next-line react-hooks/exhaustive-deps
 },[]);
 
 

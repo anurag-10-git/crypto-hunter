@@ -1,17 +1,17 @@
 
-import { 
-  ThemeProvider, 
-  createTheme, 
+import {
+  ThemeProvider,
+  createTheme,
   Typography,
-  Container, 
-  TextField, 
+  Container,
+  TextField,
   TableContainer,
-   LinearProgress, 
+   LinearProgress,
    Table,
    TableHead,
    TableRow,
    TableCell,
-   TableBody, 
+   TableBody,
    Paper } from "@material-ui/core";
 import { makeStyles } from '@mui/styles'
 import axios from "axios";
@@ -40,9 +40,6 @@ const useStyles = makeStyles(()=>({
   }
 }))
 
-// export function numberWithCommas(x) {
-//   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",");
-// } 
 
 const CoinsTable = () => {
     const [coins, setCoins] = useState([]);
@@ -58,11 +55,10 @@ const CoinsTable = () => {
         setCoins(data);
         setLoading(false);
     };
-  
-    console.log(coins);
 
     useEffect(() => {
      fetchCoins();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currency]);
 
     const darkTheme = createTheme({
